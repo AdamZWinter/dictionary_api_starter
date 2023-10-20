@@ -47,12 +47,8 @@ public class DictionaryService
     public WordDefinition addWord(String word, String definition)
     {
         word = word.toLowerCase();
-        if (!dictionary.containsKey(word))
-        {
-            dictionary.put(word, definition);
-            return new WordDefinition(word, definition);
-        }
-        return null;
+        dictionary.put(word, definition);
+        return new WordDefinition(word, definition);
     }
 
     public WordDefinition addWord(WordDefinition pair)
